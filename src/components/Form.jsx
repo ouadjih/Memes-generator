@@ -16,10 +16,11 @@ export default function Form() {
   // eslint-disable-next-line no-unused-vars
   const [allMemeImages, setAllMemeImages] = useState([]);
   console.log(allMemeImages)
-  React.useEffect(()=>{
-    fetch(`https://api.imgflip.com/get_memes`)
-    .then(res => res.json())
-    .then(data => setAllMemeImages(data.data.memes))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  React.useEffect(async () => {
+    const res = await fetch(`https://api.imgflip.com/get_memes`)
+    const data = await res.json()
+    setAllMemeImages(data.data.memes)
     console.log("effect ran")
   },[])
 
