@@ -1,0 +1,36 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 65px;
+    width: 550px;
+    padding: 20px 0px;
+    background: linear-gradient(90deg, #672280 1.86%,#A626D3 100%);
+    color: white;
+
+}
+.logo{
+    position: relative;
+    left: 20px;
+    top: -5px;
+    
+}
+.nav-img{
+    position: relative;
+    top: 8px;
+    width: 31.31px;
+    height: 26.22px;
+}
+.nav-right{
+    position: relative;
+    right:20px
+}
+
+.bold{
+    font-weight: bold;
+}
+Link{
+    color: white;
+    text-decoration: none;
+}

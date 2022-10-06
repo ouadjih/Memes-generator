@@ -1,0 +1,65 @@
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+    margin: 40px 5px;
+}
+input{
+    position: relative;
+    top: -1em;
+    left:7em;
+    width: 215px;
+    height: 40px;
+    padding: 0 9px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    color: #0D0D0D;   
+}
+.submit{
+    position: relative;
+    top: 3em;
+    left: -13em;
+    
+    width: 685px;
+    height: 40px;
+
+    background: linear-gradient(90deg, #672280 1.86%,#A626D3 100%);
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid; 
+}
+.submit:hover{
+    background: linear-gradient(90deg, #672280 1.86%,#A626D3 100%);
+    color: rgb(53, 230, 14);
+    cursor: pointer;
+}
+.meme{
+    position: relative;
+    top: 20px;
+    left: 6.5%;
+    border-radius: 2px;
+}
+.meme-image{
+    width: 477px;
+    height: 268px;
+}
+.bold{
+    font-weight: 800;
+}
+.meme--text{
+    color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+.top{
+    position: relative;
+    top: -7em;
+    left: 3em;
+}
+.buttom{
+    position: relative;
+    top: -7em;
+    left: 3em;
+}

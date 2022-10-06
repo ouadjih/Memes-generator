@@ -1,0 +1,34 @@
+
+.contact{
+    padding-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 25em;
+    width: 20em;
+    border: 1px solid #111;
+   
+
+}
+.contact-img{
+    position: relative;
+    top: -60px;
+    border-radius:60% ;
+    width: 15em;
+
+}
+.contact-info{
+    position: relative;
+    top: -60px;
+}
+.contact-favorite{
+    width: 2em;
+    height: 1.8em;
+}
+.conact-number{
+    color: #a7a6a6;
+}
+.contact-favorite:hover{
+cursor: pointer;
+}
