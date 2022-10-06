@@ -11,61 +11,56 @@ export default function Form() {
     randImage: dmeme,
   });
 
-
-
   // eslint-disable-next-line no-unused-vars
   const [allMemeImages, setAllMemeImages] = useState([]);
-  console.log(allMemeImages)
+  console.log(allMemeImages);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useEffect(async () => {
-    const res = await fetch(`https://api.imgflip.com/get_memes`)
-    const data = await res.json()
-    setAllMemeImages(data.data.memes)
-    console.log("effect ran")
-  },[])
+  React.useEffect(() => {
+    async function getMemes(){
+      const res = await fetch(`https://api.imgflip.com/get_memes`);
+      const data = await res.json();
+      setAllMemeImages(data.data.memes);
+    }
+    getMemes()
+  }, []);
 
-  
   //getting random image from data
   // let [MemeImage,setMemeImage] = useState(meme)
   function Memeing() {
-   
     const randomNum = Math.floor(Math.random() * allMemeImages.length);
     const url = allMemeImages[randomNum].url;
     setMeme((prevMeme) => ({
-        ...prevMeme,
-        randImage:url ,
+      ...prevMeme,
+      randImage: url,
     }));
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(meme)
-
+    console.log(meme);
   }
   function handleChange(e) {
-    const {value,name} = e.target
+    const { value, name } = e.target;
     setMeme((prevMeme) => {
       return {
         ...prevMeme,
-        [name]:value
+        [name]: value,
       };
     });
-    console.log(meme)
+    console.log(meme);
   }
 
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
         <input
-          
           type="text"
           name="topText"
           placeholder="type top text"
           onChange={handleChange}
-          value={meme.topText}//to be contolled components
+          value={meme.topText} //to be contolled components
         />
         <input
-        
           type="text"
           name="buttomText"
           placeholder="type buttom text"
@@ -73,10 +68,10 @@ export default function Form() {
           value={meme.buttomText}
         />
         <button className="submit bold" onClick={Memeing}>
-         Get a new meme image
-      </button>
+          Get a new meme image
+        </button>
       </form>
-      
+
       <div className="meme">
         <img className="meme-image" src={meme.randImage} alt="memeimage" />
         <h1 className="meme--text top">{meme.topText}</h1>
